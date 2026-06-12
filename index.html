@@ -6,91 +6,101 @@
 
 <title>Keerthi Korrapati | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* THEME */
 :root {
-    --bg: #0f172a;
-    --text: #e2e8f0;
-    --card: rgba(255,255,255,0.05);
+    --primary:#38bdf8;
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#e2e8f0;
 }
 
-.light {
-    --bg: #f8fafc;
-    --text: #0f172a;
-    --card: #ffffff;
+body.light{
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#0f172a;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    margin: 0;
+body{
+    font-family:'Poppins';
+    background:var(--bg);
+    color:var(--text);
+    margin:0;
 }
 
 /* NAV */
-nav {
+nav{
     display:flex;
-    justify-content: space-between;
-    padding: 20px 60px;
+    justify-content:space-between;
+    padding:20px 50px;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.6);
 }
 
-button {
-    padding:8px 15px;
-    border:none;
+nav a{
+    margin:0 15px;
+    color:var(--text);
+    text-decoration:none;
+}
+
+button{
+    padding:8px 12px;
     cursor:pointer;
 }
 
 /* HERO */
-.hero {
+.hero{
     display:flex;
-    align-items:center;
     justify-content:center;
-    margin-top:80px;
+    align-items:center;
+    height:100vh;
     gap:50px;
-    flex-wrap: wrap;
 }
 
-.hero img {
-    width:200px;
-    border-radius:50%;
+.hero img{
+    width:260px;
+    border-radius:20px;
 }
 
-.typing {
-    color:#38bdf8;
+.typing{
+    color:var(--primary);
     font-weight:600;
-    font-size:22px;
 }
 
-/* SECTIONS */
-section {
-    padding:60px 10%;
+/* SECTION */
+section{
+    padding:70px 10%;
 }
 
-h2 {
-    color:#38bdf8;
-}
-
-/* CARD */
-.card {
-    background: var(--card);
+.card{
+    background:var(--card);
     padding:20px;
-    border-radius:12px;
     margin-top:20px;
+    border-radius:10px;
 }
 
 /* GRID */
-.grid {
+.grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
+h2{
+    color:var(--primary);
+}
+
 /* FOOTER */
-footer {
+footer{
     text-align:center;
     padding:20px;
 }
+
 </style>
 </head>
 
@@ -98,75 +108,99 @@ footer {
 
 <!-- NAV -->
 <nav>
-<h3>Keerthi</h3>
-<button onclick="toggleTheme()">🌗 Toggle</button>
+<div><b>Keerthi</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<button onclick="toggleTheme()">🌗</button>
+</div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-    <img src="profile.jpg">
 
-    <div>
-        <h1>Keerthi Korrapati</h1>
-        <div class="typing" id="typing"></div>
+<img src="profile.jpg">
 
-        <p>DevOps Engineer specializing in AWS, Kubernetes, and CI/CD automation.</p>
+<div>
+<h1>Keerthi Korrapati</h1>
+<div class="typing" id="typing"></div>
 
-        <a href="https://www.linkedin.com/in/korrapati-keerthi" target="_blank">LinkedIn</a>
-    </div>
+<p>DevOps Engineer specializing in AWS, Kubernetes, and CI/CD automation.</p>
+
+<a href="https://www.linkedin.com/in/korrapati-keerthi" target="_blank">LinkedIn</a>
+</div>
+
 </div>
 
 <!-- ABOUT -->
-<section>
-<h2>About</h2>
-<div class="card">
-DevOps Engineer with 4 years experience delivering scalable cloud solutions. Achieved 99.9% deployment success and 40% faster infra provisioning.
-</div>
-</section>
+<section id="about">
+<h2>About Me</h2>
 
-<!-- SKILLS -->
-<section>
-<h2>Skills</h2>
-<div class="grid">
-<div class="card">AWS (EKS, EC2, S3)</div>
-<div class="card">Kubernetes & Docker</div>
-<div class="card">Terraform (IaC)</div>
-<div class="card">Jenkins & Argo CD</div>
-<div class="card">Prometheus & Grafana</div>
-<div class="card">Linux & Git</div>
+<div class="card">
+DevOps Engineer with 4 years experience designing scalable cloud systems.
+Achieved 99.9% deployment success, 40% faster infrastructure provisioning,
+and 20% cost savings using AWS + Terraform + Kubernetes.
 </div>
+
 </section>
 
 <!-- PROJECTS -->
-<section>
+<section id="projects">
+
 <h2>Projects</h2>
+
 <div class="grid">
 
 <div class="card">
-<h3>Internal Developer Platform</h3>
-<p>Built IDP using Backstage on AWS EKS supporting 100+ microservices with GitOps.</p>
+<h3>Internal Developer Platform (IDP)</h3>
+<p>Built Backstage platform on AWS EKS supporting 100+ microservices using GitOps and CI/CD pipelines.</p>
 </div>
 
 <div class="card">
-<h3>CI/CD Automation</h3>
-<p>Designed Jenkins pipelines reducing deployment time by 30%.</p>
+<h3>CI/CD Automation Platform</h3>
+<p>Designed Jenkins and ArgoCD pipelines reducing deployment time by 30%.</p>
 </div>
 
 <div class="card">
-<h3>AWS Infrastructure</h3>
-<p>Automated infrastructure provisioning using Terraform.</p>
+<h3>AWS Infrastructure Automation</h3>
+<p>Provisioned full AWS environments using Terraform modules with 40% faster execution.</p>
 </div>
 
 </div>
+
 </section>
 
-<!-- EXPERIENCE -->
-<section>
-<h2>Experience</h2>
+<!-- SKILLS -->
+<section id="skills">
 
-<div class="card">
-<h3>Capgemini – DevOps Engineer</h3>
-<p>Worked on cloud infrastructure, CI/CD automation, and Kubernetes deployments.</p>
+<h2>Skills</h2>
+
+<div class="grid">
+
+<div class="card">AWS (EKS, EC2, S3)</div>
+<div class="card">Docker & Kubernetes</div>
+<div class="card">Terraform</div>
+<div class="card">Jenkins & ArgoCD</div>
+<div class="card">Prometheus & Grafana</div>
+<div class="card">Linux & Git</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+
+<h2>Achievements</h2>
+
+<div class="grid">
+
+<div class="card">99.9% Deployment Success</div>
+<div class="card">40% Faster Infra Provisioning</div>
+<div class="card">30% Faster Deployments</div>
+<div class="card">20% Cost Optimization</div>
+
 </div>
 
 </section>
@@ -177,43 +211,36 @@ DevOps Engineer with 4 years experience delivering scalable cloud solutions. Ach
 
 <script>
 
-/* DARK-LIGHT MODE */
-function toggleTheme() {
-    document.body.classList.toggle("light");
+/* THEME */
+function toggleTheme(){
+document.body.classList.toggle("light");
 }
 
 /* TYPING EFFECT */
-const roles = [
+const roles=[
 "DevOps Engineer",
 "AWS Specialist",
 "Kubernetes Expert",
 "CI/CD Automation Engineer"
 ];
 
-let i = 0, j = 0, current = "", isDeleting = false;
-const speed = 100;
+let i=0,j=0,cur="",del=false;
 
-function type() {
-    current = roles[i];
+function type(){
+cur=roles[i];
 
-    if (isDeleting) {
-        document.getElementById("typing").textContent = current.substring(0, j--);
-    } else {
-        document.getElementById("typing").textContent = current.substring(0, j++);
-    }
+document.getElementById("typing").textContent=
+cur.substring(0,del?j--:j++);
 
-    if (!isDeleting && j === current.length) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-        return;
-    }
+if(!del && j===cur.length){
+del=true; setTimeout(type,1000); return;
+}
 
-    if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % roles.length;
-    }
+if(del && j===0){
+del=false; i=(i+1)%roles.length;
+}
 
-    setTimeout(type, isDeleting ? 50 : speed);
+setTimeout(type,del?50:100);
 }
 
 type();
@@ -222,3 +249,4 @@ type();
 
 </body>
 </html>
+``
