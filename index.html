@@ -1,160 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keerthi Korrapati | DevOps Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: #f1f5f9;
-        }
+<title>Keerthi Korrapati | DevOps Engineer</title>
 
-        header {
-            text-align: center;
-            padding: 40px;
-            background: #020617;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-        img {
-            width: 150px;
-            border-radius: 50%;
-            border: 3px solid #38bdf8;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        h1 {
-            margin-top: 15px;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+}
 
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-        }
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    background: rgba(2,6,23,0.7);
+    backdrop-filter: blur(10px);
+}
 
-        h2 {
-            color: #38bdf8;
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 5px;
-        }
+nav a {
+    color: #38bdf8;
+    margin-left: 20px;
+    text-decoration: none;
+}
 
-        .skills, .experience {
-            margin-top: 20px;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px;
+}
 
-        .card {
-            background: #020617;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+.hero img {
+    width: 220px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+}
 
-        ul {
-            line-height: 1.8;
-        }
+.hero-text h1 {
+    font-size: 40px;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-        }
+.hero-text span {
+    color: #38bdf8;
+}
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-    </style>
+.hero p {
+    margin: 15px 0;
+    max-width: 400px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #020617;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+}
+</style>
+
 </head>
+
 <body>
 
-<header>
-    <img src="profile.jpg" alt="Profile Photo">
-    <h1>Keerthi Korrapati</h1>
-    <p>Senior Analyst</p>
-    <p>
-        📍 Bangalore | 📧 korrapatikeerthi24@gmail.com <br>
-        <a href="https://www.linkedin.com/in/korrapati-keerthi" target="_blank">LinkedIn Profile</a>
-    </p>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h3>Keerthi</h3>
+    <div>
+        About
+        Skills
+        Experience
+    </div>
+</nav>
 
+<!-- HERO -->
+<div class="hero">
+    <img src="profile.jpg" alt="Profile">
+
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Keerthi</span></h1>
+        <p>DevOps Engineer with 4 years of experience specializing in AWS, CI/CD pipelines, Kubernetes, and Infrastructure Automation.</p>
+
+        <a href="https://www.linkedin.com/in/korrapati-keerthi" target="_blank" class="btn">LinkedIn</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
 <section>
     <h2>About Me</h2>
-    <p>
-        Results-driven DevOps Engineer with 4 years of experience in AWS, CI/CD pipelines, and Kubernetes.
-        Proven track record of improving deployment success to 99.9%, reducing infrastructure provisioning time by 40%,
-        and cutting deployment time by 30%.
-    </p>
-</section>
-
-<section>
-    <h2>Technical Skills</h2>
     <div class="card">
-        <ul>
-            <li><b>Cloud:</b> AWS (EKS, EC2, S3, IAM, VPC, RDS)</li>
-            <li><b>DevOps:</b> Jenkins, Argo CD, Azure DevOps</li>
-            <li><b>Containers:</b> Docker, Kubernetes, Helm</li>
-            <li><b>IaC:</b> Terraform</li>
-            <li><b>Monitoring:</b> Prometheus, Grafana</li>
-            <li><b>Tools:</b> Git, Linux, Shell Scripting</li>
-        </ul>
+        Results-driven DevOps Engineer with proven expertise in building scalable cloud systems and CI/CD pipelines.
+        Achieved 99.9% deployment success rate and reduced deployment time by 30%.
     </div>
 </section>
 
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">🚀 AWS (EKS, EC2, S3, IAM, VPC)</div>
+        <div class="card">⚙️ Jenkins, Argo CD, Azure DevOps</div>
+        <div class="card">🐳 Docker, Kubernetes, Helm</div>
+        <div class="card">📦 Terraform (IaC)</div>
+        <div class="card">📊 Prometheus, Grafana</div>
+        <div class="card">💻 Git, Linux, Shell Scripting</div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
 <section>
     <h2>Experience</h2>
 
     <div class="card">
         <h3>Cloud DevOps Engineer – Capgemini</h3>
-        <ul>
-            <li>Built Internal Developer Platform supporting 100+ microservices</li>
-            <li>Implemented CI/CD pipelines and GitOps using Argo CD</li>
-            <li>Managed Kubernetes (EKS) infrastructure and Docker images</li>
-            <li>Integrated AWS with Azure DevOps workflows</li>
-        </ul>
+        <p>
+            Built Internal Developer Platform for 100+ microservices using AWS EKS, Kubernetes, and GitOps.
+            Automated deployments using Argo CD and CI/CD pipelines.
+        </p>
     </div>
 
     <div class="card">
         <h3>DevOps Engineer – Capgemini</h3>
-        <ul>
-            <li>Reduced deployment effort by 30% using Jenkins pipelines</li>
-            <li>Automated AWS infra using Terraform</li>
-            <li>Optimized Docker images (30% smaller)</li>
-            <li>Improved monitoring with Prometheus & Grafana</li>
-        </ul>
+        <p>
+            Reduced deployment time by 30%, implemented Terraform automation, and optimized AWS cost by 20%.
+        </p>
     </div>
 
 </section>
 
+<!-- ACHIEVEMENTS -->
 <section>
     <h2>Achievements</h2>
-    <div class="card">
-        <ul>
-            <li>99.9% deployment success rate</li>
-            <li>40% faster infrastructure provisioning</li>
-            <li>20% AWS cost savings</li>
-            <li>35% faster issue detection</li>
-        </ul>
+    <div class="grid">
+        <div class="card">99.9% Deployment Success</div>
+        <div class="card">40% Faster Provisioning</div>
+        <div class="card">20% Cost Savings</div>
+        <div class="card">35% Faster Monitoring</div>
     </div>
 </section>
 
-<section>
-    <h2>Education & Certifications</h2>
-    <div class="card">
-        <ul>
-            <li>B.Tech in Computer Science Engineering</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Rising Star Award – Capgemini</li>
-        </ul>
-    </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Keerthi Korrapati</p>
 </footer>
 
 </body>
 </html>
-``
